@@ -1,0 +1,180 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$corgi-name: 'corgi';
+$corgi-x: 0px;
+$corgi-y: 321px;
+$corgi-offset-x: 0px;
+$corgi-offset-y: -321px;
+$corgi-width: 150px;
+$corgi-height: 150px;
+$corgi-total-width: 892px;
+$corgi-total-height: 627px;
+$corgi-image: 'sprite.png';
+$corgi: (0px, 321px, 0px, -321px, 150px, 150px, 892px, 627px, 'sprite.png', 'corgi', );
+$dogagency-name: 'dogagency';
+$dogagency-x: 0px;
+$dogagency-y: 0px;
+$dogagency-offset-x: 0px;
+$dogagency-offset-y: 0px;
+$dogagency-width: 892px;
+$dogagency-height: 186px;
+$dogagency-total-width: 892px;
+$dogagency-total-height: 627px;
+$dogagency-image: 'sprite.png';
+$dogagency: (0px, 0px, 0px, 0px, 892px, 186px, 892px, 627px, 'sprite.png', 'dogagency', );
+$dogass-name: 'dogass';
+$dogass-x: 304px;
+$dogass-y: 186px;
+$dogass-offset-x: -304px;
+$dogass-offset-y: -186px;
+$dogass-width: 130px;
+$dogass-height: 92px;
+$dogass-total-width: 892px;
+$dogass-total-height: 627px;
+$dogass-image: 'sprite.png';
+$dogass: (304px, 186px, -304px, -186px, 130px, 92px, 892px, 627px, 'sprite.png', 'dogass', );
+$doghead-name: 'doghead';
+$doghead-x: 0px;
+$doghead-y: 471px;
+$doghead-offset-x: 0px;
+$doghead-offset-y: -471px;
+$doghead-width: 143px;
+$doghead-height: 156px;
+$doghead-total-width: 892px;
+$doghead-total-height: 627px;
+$doghead-image: 'sprite.png';
+$doghead: (0px, 471px, 0px, -471px, 143px, 156px, 892px, 627px, 'sprite.png', 'doghead', );
+$down-name: 'down';
+$down-x: 504px;
+$down-y: 186px;
+$down-offset-x: -504px;
+$down-offset-y: -186px;
+$down-width: 50px;
+$down-height: 50px;
+$down-total-width: 892px;
+$down-total-height: 627px;
+$down-image: 'sprite.png';
+$down: (504px, 186px, -504px, -186px, 50px, 50px, 892px, 627px, 'sprite.png', 'down', );
+$facebook-name: 'facebook';
+$facebook-x: 554px;
+$facebook-y: 186px;
+$facebook-offset-x: -554px;
+$facebook-offset-y: -186px;
+$facebook-width: 44px;
+$facebook-height: 44px;
+$facebook-total-width: 892px;
+$facebook-total-height: 627px;
+$facebook-image: 'sprite.png';
+$facebook: (554px, 186px, -554px, -186px, 44px, 44px, 892px, 627px, 'sprite.png', 'facebook', );
+$index-name: 'index';
+$index-x: 0px;
+$index-y: 186px;
+$index-offset-x: 0px;
+$index-offset-y: -186px;
+$index-width: 304px;
+$index-height: 135px;
+$index-total-width: 892px;
+$index-total-height: 627px;
+$index-image: 'sprite.png';
+$index: (0px, 186px, 0px, -186px, 304px, 135px, 892px, 627px, 'sprite.png', 'index', );
+$poop-name: 'poop';
+$poop-x: 434px;
+$poop-y: 186px;
+$poop-offset-x: -434px;
+$poop-offset-y: -186px;
+$poop-width: 70px;
+$poop-height: 70px;
+$poop-total-width: 892px;
+$poop-total-height: 627px;
+$poop-image: 'sprite.png';
+$poop: (434px, 186px, -434px, -186px, 70px, 70px, 892px, 627px, 'sprite.png', 'poop', );
+$question-name: 'question';
+$question-x: 598px;
+$question-y: 186px;
+$question-offset-x: -598px;
+$question-offset-y: -186px;
+$question-width: 44px;
+$question-height: 44px;
+$question-total-width: 892px;
+$question-total-height: 627px;
+$question-image: 'sprite.png';
+$question: (598px, 186px, -598px, -186px, 44px, 44px, 892px, 627px, 'sprite.png', 'question', );
+$twitter-name: 'twitter';
+$twitter-x: 642px;
+$twitter-y: 186px;
+$twitter-offset-x: -642px;
+$twitter-offset-y: -186px;
+$twitter-width: 44px;
+$twitter-height: 44px;
+$twitter-total-width: 892px;
+$twitter-total-height: 627px;
+$twitter-image: 'sprite.png';
+$twitter: (642px, 186px, -642px, -186px, 44px, 44px, 892px, 627px, 'sprite.png', 'twitter', );
+$spritesheet-width: 892px;
+$spritesheet-height: 627px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($corgi, $dogagency, $dogass, $doghead, $down, $facebook, $index, $poop, $question, $twitter, );
+$spritesheet: (892px, 627px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
