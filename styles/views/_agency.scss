@@ -1,0 +1,331 @@
+@import "../bourbon/bourbon";
+
+#agency{
+	
+	background-color : #eeeff4;
+	
+	.agency-header{
+		
+		height: 400px;
+		background-image: url("../../images/agency-background.jpg");
+		background-size: cover;
+		background-position: 0 100%;
+		position: relative;
+
+		.agency-content{
+
+			position: absolute;
+			width: 1024px;
+			left: 50%;
+			margin-left: -512px;
+
+			top: 150px;
+
+			color : white;
+
+			padding-left: 100px;
+
+			h2{
+
+    			font-family: 'brandon_grotesquelight';
+    			font-size: 60px;
+
+    			letter-spacing: 0.05em;
+
+    			margin-top: 10px;
+			}	
+
+			h3{
+
+				margin-bottom: 10px;
+
+				font-family: 'brandon_grotesquebold';
+    			font-size: 24px;
+
+    			text-transform: uppercase;
+			}
+
+		}
+	}
+
+	#main-container{
+
+		background-color: white;
+
+		position: relative;
+		top : -40px;
+
+		.agency-content-left{
+
+			.friendly-container{
+
+				margin-top: 30px;
+				margin-right: 15px;
+
+				position: relative;
+
+				h2{
+
+					position: absolute;
+
+					top: 60px;
+					width : 100%;
+
+					text-align: center;
+					color : $green;
+					font-family: 'brandon_grotesquelight';
+
+				}
+
+				.bold{
+
+					font-family: 'brandon_grotesquebold';
+					color : white;
+				}
+
+				img{
+
+					width: 100%;
+					height: auto;
+
+				}
+			}
+		}	
+
+		.agency-content-right{
+
+			.stats{
+
+				margin: 40px 0px;
+
+
+				.stat{
+
+					text-align: center;
+					p{
+						
+						margin-top: 10px;
+						font-family: 'brandon_grotesquelight';
+						position: relative;
+						z-index: 1;
+					}
+
+					.big{
+
+						font-family: 'Neuton', serif;
+						font-size: 60px;
+						line-height: 40px;
+						position: relative;
+						z-index: 1;
+
+					}
+
+					i{
+
+						color: $darkGreen;
+						opacity: 0.5;
+						font-size: 100px;
+						position: absolute;
+						top: -40px;
+						left: 50%;
+						margin-left: -30px;
+						z-index: 0;
+
+						&.ion-ios-paw-outline{
+
+							margin-left: -39px;
+
+						}
+						&.ion-ios-flame-outline{
+
+							margin-left: -30px;
+
+						}
+						&.ion-android-favorite-outline{
+
+							margin-left: -42px;
+
+						}
+					}
+				}
+			}
+
+			.actions{
+
+				.informations{
+					
+					margin-bottom: 40px;
+
+				}
+			}
+
+			h1{
+
+				margin-top : 40px;
+				font-family: 'brandon_grotesquelight';
+
+			}
+
+			h2{
+
+				font-family: 'brandon_grotesquebold';
+				text-transform: uppercase;
+				font-size: 14px;
+
+			}
+
+			p{
+			
+				font-family: 'brandon_grotesquelight';
+				font-size: 16px;
+			}
+
+
+			a{
+
+				font-family: 'Neuton', serif;
+				font-weight: 500;
+
+				font-size: 16px;
+
+				color: $blue;
+
+				.icon{
+
+					color : black;
+
+				}
+
+			}
+
+			i{
+				font-size: 30px;
+				margin: 0px 10px;
+			}
+
+			.informations{
+				font-family: 'Neuton', serif;
+				font-size: 12px;
+			}
+
+		}
+
+
+		.related-dog{
+
+			header{
+
+				margin: 150px 0px 50px 0px;
+				text-align: center;
+
+				h2{
+					text-transform: uppercase;
+					font-size: 14px;
+
+					margin-bottom: 0px;
+				}
+
+				h3{
+
+					margin-top: 10px;
+					font-family: 'Neuton', serif;
+					font-size: 44px;
+
+					letter-spacing: 0.08em;
+
+					font-weight: 100;
+				}
+			}
+
+			.dogs{
+
+				> .dog{
+
+					cursor: pointer;
+
+					list-style: none;
+					position: relative;
+					padding: 40px;
+
+				
+
+					.dog-content{
+						
+						position: relative;
+						overflow: hidden;
+						text-align: center;
+
+						.overlay{
+							
+							
+					        @include transition(all 0.8s ease-in-out);
+
+							position: absolute;
+							width: 100%;
+							height: 100%;
+
+							background-color: $blue;
+
+							opacity: 0;
+						}
+
+						a{
+							opacity: 0;
+
+						
+					        @include transition(all 0.5s ease-in 0.2s);
+
+							position: absolute;
+							left : 20px;
+							bottom: 0px;
+
+							color : white;
+							text-transform: uppercase;
+
+							border-bottom: solid 5px white;
+						}
+
+						img{
+
+							width: 100%;
+							height: auto;
+						}
+
+					}
+
+					&:hover{
+
+						.dog-content{
+						
+						
+						.overlay{
+
+							opacity: 0.8;
+						}
+
+						a{
+
+							opacity: 1;
+							bottom: 20px;
+
+							
+						}
+
+						img{
+
+						}
+
+					}
+
+
+					}
+
+
+				}
+
+			}
+
+		}
+	}
+
+}

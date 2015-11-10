@@ -1,0 +1,20 @@
+@import "../bourbon/bourbon";
+
+
+.page{
+	
+	background-color : #eeeff4;
+	> header{
+
+		height: 400px;
+
+	}
+	#main-container{
+
+		background-color: white;
+
+		position: relative;
+		top : -40px;
+
+	}
+}
