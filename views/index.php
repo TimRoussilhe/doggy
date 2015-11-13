@@ -13,16 +13,46 @@ include_once "header.php"; // this will include a.php
         <div class="index"></div>
         <div class="doghead"></div>
         <div class="dogtail"></div>
-
+        
       </div>
 
       <div class="intro-text">Humans are good but ugly. Pick your next agency based on something that really matters: cute dogs.</div>
       
-      <div class="down"></div>
+      <section class="search-form">
+<!--         <h2>Find out what agencies in New York that loves dogs </h2>
+ -->       
+        <form>
+         <input type="text" name="search" placeholder="">
+         <input type="submit" value="Filter List" disabled>
+        </form>
+        <h3>Use our database to find out if your next agency is dog loving or not.</h3>
+
+        <div class='autocomplete-container'>
+          
+          <ul>
+
+            <li class="introduction">Explore results between <a href="" class="agency-number">26 agencies</a> located in <a href="">New York City</a></li>
+            <?php 
+
+              foreach ($agencies as $key => $value) {
+                
+                $agencyUrl = $BASE_URL . '/agencies/' . $value["Name_slug"];
+
+                echo '<li class="autocomplete-result"><a href="'.$agencyUrl.'">'.$value["Name"].'</a></li>';
+
+              }
+
+             ?>
+
+           </ul>
+        </div>
+      </section>
+
       <div class="corgi"></div>
 
     </section>
 
+<!-- 
     <div class="container" id="main-container">
       <section class="search-form">
         <h2>Find out what agencies in New York that loves dogs </h2>
@@ -35,7 +65,7 @@ include_once "header.php"; // this will include a.php
 
         <div class='autocomplete-container'>
         </div>
-
+      </section>
         <p class="subtitle"> <span class="bold">200 Agencies</span> in our Database. Is your agency not on the list? Shoot us an email.</p>
 
         <section class="doge-options clearfix">
@@ -59,14 +89,8 @@ include_once "header.php"; // this will include a.php
       </div>
 
       <section class="form-container">
-          
-        <?php 
 
-        include_once "form.php"; // this will include a.php
-
-        ?>
-
-      </section>
+      </section> -->
 
       <!-- section id="main-questions" class="clearfix">
         <div class="question-container">
@@ -81,12 +105,11 @@ include_once "header.php"; // this will include a.php
         </div>
       </section>
  -->
-      <section id="agency-form">
-        
-      </section>
-      
-<?php 
 
-    include_once "footer.php"; // this will include a.php
+ <?php 
+
+  include_once "footer.php"; // this will include a.php
+
 
  ?>
+

@@ -6,7 +6,7 @@ include_once "header.php"; // this will include a.php
 <div id="agency" class="page">
 	
 
-	<section class="agency-header">
+	<section class="agency-background">
 
 		<div class="agency-content">
 			<h3>Agency</h3>	
@@ -35,38 +35,20 @@ include_once "header.php"; // this will include a.php
 
 	  			</div>
 	  		</section>
-
 	  		<section class="agency-content-right col-md-6 col-xs-12">
 	  		
 	  			<h1 data-slug="<?php echo $agency['Name_slug']; ?>" class="name"><?php echo $agency["Name"]; ?></h1>
 	  			<h2><?php echo $agency["Field"]; ?> - <?php echo $agency["City"]; ?></h2>
+				
 				<p>
 					<?php echo $agency["Description"]; ?>
 				</p>
 
 				<a href="" title="">Visit Website</a>
 
-				<div class="stats clearfix">
-					
-					<div class="stat col-md-4">
-						<p>Number of dogs</p>
-						<p class="big">
-							<?php 
-								echo (count($agency["Dog"]));
-							 ?>
-						</p>
-						<i class="icon ion-ios-paw-outline"></i>
+				<div class="row infos-row">
 
-					</div>
-
-					<div class="stat col-md-4">
-						<p>Total Cuteness </p>
-						<p class="big">200</p>
-						<i class="icon ion-android-favorite-outline"></i>
-					</div>
-				</div>
-
-				<div class="actions">
+				<div class="actions col-md-7">
 					
 					<button type="">
 						Apply here with your dog
@@ -80,18 +62,35 @@ include_once "header.php"; // this will include a.php
 
 				</div>
 
+				<div class="stats col-md-5">
+					
+					<div class="stat">
+						<p>Number of dogs</p>
+						<p class="big">
+							<?php 
+								echo (count($agency["Dog"]));
+							 ?>
+						</p>
+						<i class="icon ion-ios-paw-outline"></i>
+
+					</div>
+
+ 				</div>
+
+				</div>
+
 
 	  		</section>
 
 	   </section>
-
+<!-- 
 	   <section class="related-dog clearfix text-left">
 	   		<header>
 	   			
 	   			<h2>Check out those cutie faces</h2>	
 	   			<h3><?php echo $agency["Name"]; ?> Dogs</h3>
 
-	   		</header><!-- /header -->
+	   		</header>
 			
 			<div class="dogs">
 
@@ -128,7 +127,7 @@ include_once "header.php"; // this will include a.php
 				 ?>
 
 			</div>
-
+ -->
 				
 			</ul>
 

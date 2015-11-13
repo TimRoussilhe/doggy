@@ -5868,6 +5868,10 @@ body {
 html, body {
   -webkit-font-smoothing: antialiased; }
 
+html, body {
+  overflow: hidden;
+  height: 100%; }
+
 @font-face {
   font-family: 'brandon_grotesquebold';
   src: url("/fonts/brandon_bld-webfont.eot");
@@ -5968,7 +5972,7 @@ The `sprites` mixin generates identical output to the CSS template
   position: relative;
   top: 0px;
   width: 100%;
-  height: 768px; }
+  height: 100%; }
   #main-intro .main-logo {
     position: absolute;
     width: 1150px;
@@ -6027,15 +6031,8 @@ The `sprites` mixin generates identical output to the CSS template
     left: 50%;
     bottom: 50px;
     margin-left: -31px; }
-  #main-intro .poop {
-    background-image: url(sprite.png);
-    background-position: -434px -186px;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    right: 100px;
-    bottom: 100px; }
   #main-intro .intro-text {
+    opacity: 0;
     font-family: 'brandon_grotesquebold';
     text-align: center;
     color: white;
@@ -6045,7 +6042,98 @@ The `sprites` mixin generates identical output to the CSS template
     height: 100px;
     margin-left: -400px;
     left: 50%;
-    bottom: 120px; }
+    top: 50%; }
+  #main-intro .search-form {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    margin-top: 50px;
+    left: 50%;
+    margin-left: -400px;
+    text-align: center; }
+    #main-intro .search-form h2 {
+      font-family: 'brandon_grotesquelight';
+      font-size: 42px; }
+    #main-intro .search-form h3 {
+      font-family: 'brandon_grotesquelight';
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: white; }
+    #main-intro .search-form form {
+      position: relative;
+      z-index: 1000;
+      margin-bottom: 20px; }
+      #main-intro .search-form form input[type="text"] {
+        background-color: white;
+        border: 1px solid #eaeaea;
+        width: 470px;
+        height: 60px;
+        border-radius: 5px;
+        padding-left: 20px; }
+      #main-intro .search-form form input[type="submit"] {
+        background: none;
+        border: none;
+        position: relative;
+        left: -10px;
+        top: 0px;
+        background-color: #58ffdf;
+        width: 130px;
+        height: 60px;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-family: 'brandon_grotesquemedium';
+        font-size: 16px;
+        text-transform: uppercase; }
+    #main-intro .search-form .autocomplete-container {
+      top: 50px;
+      width: 590px;
+      height: 350px;
+      overflow-y: auto;
+      position: absolute;
+      left: 50%;
+      margin-left: -301px;
+      z-index: 999;
+      padding-top: 10px;
+      background-color: white;
+      border-bottom: 1px #efefef solid;
+      border-left: 1px #efefef solid;
+      border-right: 1px #efefef solid;
+      -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+      text-align: left; }
+      #main-intro .search-form .autocomplete-container ul {
+        padding-left: 0px;
+        padding-bottom: 0px; }
+      #main-intro .search-form .autocomplete-container .autocomplete-result {
+        height: 40px;
+        line-height: 40px;
+        font-family: 'brandon_grotesquemedium';
+        font-size: 16px;
+        color: #333;
+        list-style: none;
+        padding-left: 40px;
+        cursor: pointer; }
+        #main-intro .search-form .autocomplete-container .autocomplete-result:hover {
+          background-color: #f8f9fb; }
+      #main-intro .search-form .autocomplete-container .introduction {
+        height: 40px;
+        line-height: 40px;
+        font-family: 'brandon_grotesquemedium';
+        font-size: 16px;
+        color: #333;
+        list-style: none;
+        padding-left: 40px;
+        padding-left: 0px;
+        border-bottom: 1px #efefef solid;
+        text-align: center; }
+    #main-intro .search-form .subtitle {
+      margin-bottom: 80px;
+      font-family: 'brandon_grotesquelight';
+      font-size: 16px; }
+      #main-intro .search-form .subtitle .bold {
+        font-family: 'brandon_grotesquebold'; }
 
 #main-container {
   text-align: center; }
@@ -6164,14 +6252,18 @@ The `sprites` mixin generates identical output to the CSS template
     top: -40px; }
 
 #agency {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
   background-color: #eeeff4; }
-  #agency .agency-header {
-    height: 400px;
+  #agency .agency-background {
+    height: 100%;
     background-image: url("../../images/agency-background.jpg");
     background-size: cover;
     background-position: 0 100%;
-    position: relative; }
-    #agency .agency-header .agency-content {
+    position: absolute;
+    width: 100%; }
+    #agency .agency-background .agency-content {
       position: absolute;
       width: 1024px;
       left: 50%;
@@ -6179,23 +6271,29 @@ The `sprites` mixin generates identical output to the CSS template
       top: 150px;
       color: white;
       padding-left: 100px; }
-      #agency .agency-header .agency-content h2 {
+      #agency .agency-background .agency-content h2 {
         font-family: 'brandon_grotesquelight';
         font-size: 60px;
         letter-spacing: 0.05em;
         margin-top: 10px; }
-      #agency .agency-header .agency-content h3 {
+      #agency .agency-background .agency-content h3 {
         margin-bottom: 10px;
         font-family: 'brandon_grotesquebold';
         font-size: 24px;
         text-transform: uppercase; }
   #agency #main-container {
     background-color: white;
-    position: relative;
-    top: -40px; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); }
     #agency #main-container .agency-content-left .friendly-container {
       margin-top: 30px;
       margin-right: 15px;
+      margin-bottom: 30px;
       position: relative; }
       #agency #main-container .agency-content-left .friendly-container h2 {
         position: absolute;
@@ -6210,6 +6308,8 @@ The `sprites` mixin generates identical output to the CSS template
       #agency #main-container .agency-content-left .friendly-container img {
         width: 100%;
         height: auto; }
+    #agency #main-container .agency-content-right .infos-row {
+      margin-top: 40px; }
     #agency #main-container .agency-content-right .stats {
       margin: 40px 0px; }
       #agency #main-container .agency-content-right .stats .stat {
@@ -6437,5 +6537,64 @@ button,
 
 *:focus {
   outline: 0; }
+
+.pop-up-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 99999; }
+  .pop-up-container .overlay {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0.8;
+    background-color: black; }
+  .pop-up-container .pop-up {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    margin-top: -300px;
+    width: 800px;
+    height: 600px;
+    z-index: 99;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); }
+    .pop-up-container .pop-up.faq .faq-container {
+      margin: 20px;
+      background-color: #62b483;
+      height: 100%;
+      color: white; }
+    .pop-up-container .pop-up.faq h2 {
+      font-family: 'Neuton';
+      font-size: 40px;
+      margin-top: 20px;
+      font-weight: 400;
+      text-transform: none;
+      text-align: center;
+      width: 200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 9; }
+    .pop-up-container .pop-up.faq .icon {
+      position: absolute;
+      color: #457c5b;
+      z-index: 8;
+      font-size: 120px;
+      left: 50%;
+      margin-left: -40px;
+      top: 10px; }
+    .pop-up-container .pop-up.faq li {
+      font-family: 'Neuton', serif;
+      font-size: 16px;
+      list-style: none; }
 
 /*# sourceMappingURL=main.css.map */

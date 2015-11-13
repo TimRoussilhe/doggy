@@ -45,7 +45,7 @@
     
 ?>
   </head>
-  <body>
+  <body class="<?php echo $page; ?>">
   
   <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -57,9 +57,9 @@
         <li><i class="icon ion-ios-paw"></i><h1><a href="<?php echo $BASE_URL;?>" title="">Dog Agency Index</a></h1></li>
       </ul>
       <ul class="nav right-nav pull-right ">
-        <li><a href="<?php echo $BASE_URL."/agencies/"; ?>" class="link">Agencies</a></li>
+        <li><a href="<?php echo $BASE_URL."/agencies/"; ?>" class="link">FAQ</a></li>
         <li><a href="#" class="link">Testimonials</a></li>
-        <li><a href="#" class="link cta">Add an agency</a></li>
+        <li><a href="mailto:report@doggyagencyindex.com?subject=My awesome doggy&body=We were so lazy we didnt build a real form so please report your dog . And dont forget cute pictures!!!!" class="link cta" >Add an agency</a></li>
         <li><a href="#" class="icon facebook"><i class="icon ion-social-facebook"></i></a></li>
         <li><a href="#" class="icon twitter"><i class="icon ion-social-twitter"></i></a></li>
       </ul>

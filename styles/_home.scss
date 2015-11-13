@@ -6,7 +6,7 @@
 	top : 0px;
 
 	width : 100%;
-	height: 768px;
+	height: 100%;
 
 	.main-logo{
 
@@ -69,19 +69,11 @@
 		left : 50%;
 		bottom: 50px;
 		margin-left: -31px;
-	}	
-
-	.poop{
-		@include sprite($poop);
-
-		position: absolute;
-
-		right: 100px;
-		bottom: 100px;
-		
 	}
 
 	.intro-text{
+
+		opacity: 0;
 
 		font-family: 'brandon_grotesquebold';
 		text-align: center;
@@ -94,9 +86,174 @@
 		margin-left: -400px;
 
 		left : 50%;
-		bottom : 120px;
+		top : 50%;
 	}
 
+
+	.search-form{
+
+		position: absolute;
+		width : 800px;
+
+		top: 50%;
+		margin-top: 50px;
+		left: 50%;
+
+		margin-left: -400px;
+
+		text-align: center;
+
+		h2{
+
+			font-family: 'brandon_grotesquelight';
+			font-size: 42px;
+
+		}
+
+		h3{
+
+			font-family: 'brandon_grotesquelight';
+			font-size: 20px;
+			margin-bottom: 20px;
+
+			color : white;
+
+		}
+
+		form{
+
+			position: relative;
+    		z-index: 1000;
+			margin-bottom: 20px;
+
+			input[type="text"]{
+
+				background-color: white;
+				border : 1px solid #eaeaea;
+
+				width: 470px;
+				height: 60px;
+
+				border-radius: 5px;
+
+				padding-left: 20px;
+
+
+			}
+
+			input[type="submit"]{
+
+				background:none;
+  				border:none;
+  				position: relative;
+    			left: -10px;
+    			top: 0px;
+				background-color: $green;
+
+				width: 130px;
+				height: 60px;
+				border : none;
+				border-top-right-radius : 5px;
+				border-bottom-right-radius : 5px;
+
+				font-family: 'brandon_grotesquemedium';
+				font-size: 16px;	
+				text-transform: uppercase;
+
+			}
+
+		}
+
+		.autocomplete-container{
+
+			top : 50px;
+			width : 590px;
+			height: 350px;
+			overflow-y : auto;
+
+			position: absolute;
+			left : 50%;
+			margin-left : -301px;
+			z-index : 999;
+
+			padding-top: 10px;
+
+			background-color: white;
+
+			border-bottom: 1px #efefef solid;
+			border-left: 1px #efefef solid;
+			border-right: 1px #efefef solid;
+
+			-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+			-moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+			box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+
+			text-align: left;
+			ul{
+				padding-left: 0px;
+				padding-bottom: 0px;
+			}
+
+			.autocomplete-result{
+
+				height: 40px;
+				line-height: 40px;
+				font-family: 'brandon_grotesquemedium';
+				font-size: 16px;
+				color : #333;
+
+				list-style: none;
+
+				padding-left: 40px;
+
+				cursor: pointer;
+
+				&:hover{
+
+					background-color: #f8f9fb;
+
+				}
+
+
+
+			}
+		
+			.introduction{
+
+				height: 40px;
+				line-height: 40px;
+				font-family: 'brandon_grotesquemedium';
+				font-size: 16px;
+				color : #333;
+
+				list-style: none;
+
+				padding-left: 40px;
+
+				padding-left: 0px;
+				border-bottom: 1px #efefef solid;
+				text-align: center;
+
+			}
+
+		}
+
+		.subtitle{
+
+			margin-bottom: 80px;
+
+			font-family: 'brandon_grotesquelight';
+			font-size: 16px;	
+
+
+			.bold{
+				
+				font-family: 'brandon_grotesquebold';
+
+			}
+
+		}
+	}
 
 }
 
